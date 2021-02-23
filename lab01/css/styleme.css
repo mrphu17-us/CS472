@@ -7,6 +7,20 @@ body {
     font-family: HachiMaruPop;
 }
 
+p {
+    font-size: medium;
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 10px;
+    background-image: url('../../images/bg.jpg');
+}
+
 .course {
     background-color: beige;
     padding: 10px;
@@ -87,4 +101,48 @@ a:hover {
     color: red;
     font-size: 20px;
     font-family: fantasy;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.darkmagenta {
+    color: darkmagenta;
+}
+
+.blue {
+    color: blue;
+}
+
+.img-150 {
+    height: 150px;
+}
+
+.img-300 {
+    height: 300px;
+}
+
+.width-300 {
+    width: 300px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table-100 {
+    width: 100%;
+}
+
+.font-20 {
+    font-size: 20px;
 }
