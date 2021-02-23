@@ -1,0 +1,92 @@
+body {
+    color: #404040;
+    font-size: 11pt;
+    min-height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background-image: url("images/silverware.jpg");
+}
+
+.content-inside {
+    padding: 20px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.table-100 {
+    width: 100%;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.color-gold {
+    color: #A4A400;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.a-link {
+    cursor: pointer;
+}
+
+.font-22pt {
+    font-size: 22pt;
+}
+
+.font-18pt {
+    font-size: 18pt;
+}
+
+.header-title {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    text-decoration: underline;
+    padding: 5px 0px 5px 0px;
+}
+
+.comment-block {
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+
+li {
+    padding: 3px;
+}
+
+ul.cake-bullet li {
+    list-style-image: url("images/pie_bullet.png");
+}
+
+ul.no-bullet li {
+    list-style-type: none;
+}
+
+ul.no-padding {
+    padding-inline-start: 0px;
+}
+
+.margin-top-bottom-10 {
+    margin: 10px 0px 20px 0px;
+}
