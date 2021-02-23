@@ -1,10 +1,15 @@
+html {
+    background-image: url("images/silverware.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
 body {
     color: #404040;
     font-size: 11pt;
     min-height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
-    background-image: url("images/silverware.jpg");
 }
 
 .content-inside {
@@ -64,6 +69,7 @@ body {
     font-weight: lighter;
     text-decoration: underline;
     padding: 5px 0px 5px 0px;
+    letter-spacing: 0.25em;
 }
 
 .comment-block {
