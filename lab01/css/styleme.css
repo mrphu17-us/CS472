@@ -3,7 +3,7 @@ body {
 }
 
 .course {
-    background-color:beige;
+    background-color: beige;
     padding: 10px;
 }
 
@@ -12,6 +12,7 @@ body {
     font-size: 25px;
     color: aqua;
 }
+
 .book {
     background-color: blanchedalmond;
     padding: 10px;
@@ -21,60 +22,60 @@ body {
     color: green;
 }
 
-.book>ol>li>p{
+.book>ol>li>p {
     font-weight: bold;
 }
 
 .book p::first-letter {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 dl dt {
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	color:deeppink;
-	font-weight: bold;
-	font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: deeppink;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 dl dd {
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-style: italic;
-	font-size: 0.9em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 0.9em;
 }
 
 .mood>h2 {
-    color:blueviolet;
+    color: blueviolet;
 }
 
-.mood>div>span{
+.mood>div>span {
     font-size: 30px;
     color: cadetblue;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .mood {
-    background-color:floralwhite;
+    background-color: floralwhite;
     padding: 10px;
 }
 
 .fact>h2 {
-    color:darkblue;
+    color: darkblue;
 }
 
 .fact {
-    background-color:darkkhaki;
+    background-color: darkkhaki;
     padding: 10px;
 }
 
 a:link {
-	color: red;
-	text-decoration: none;
+    color: red;
+    text-decoration: none;
 }
 
 a:hover {
-	color: black;
-	font-style: unset;
-	text-decoration: underline;
+    color: black;
+    font-style: unset;
+    text-decoration: underline;
 }
 
 .neighboor {
