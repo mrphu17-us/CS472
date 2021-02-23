@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
+    <meta name="referrer" content="origin-when-crossorigin">
     <title>Phu Nguyen</title>
     <style>
         li {
@@ -38,17 +39,23 @@
         #footer-w3 {
             float: right;
         }
+        div.circletag{
+            text-align: center;
+        }
+        div.circletag>img {
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <p>
+        <div class="circletag">
             <img alt="John's avatar" width="300" src="images/avt.jpg"/>
-        </p>
-        <h1>The Phu, Nguyen</h1>
+            <h1>The Phu Nguyen</h1>
+        </div>
         <ul>
-            <li>My Homepage Lab</li>
-            <li>About Me Lab</li>
+            <li><a href="https://mrphu17-us.github.io/CS472/lab00/index.html" target="_blank">My Homepage Lab</a></li>
+            <li><a href="https://mrphu17-us.github.io/CS472/lab01/index.html" target="_blank">About Me Lab</a></li>
             <li>Grades Exercises</li>
             <li>Servlet Introduction Lab</li>
             <li>Simple Calculator Lab</li>
@@ -75,6 +82,9 @@
                   <th style="text-align: right;">
                     <a href="https://validator.w3.org/check/referer" target="_blank">
                         <img src="https://www.w3.org/Icons/valid-xhtml10" alt="html validator" referrerpolicy="no-referrer-when-downgrade" />
+                    </a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://mrphu17-us.github.io/CS472/lab00/index.html" target="_blank">
+                        <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
                     </a>
                   </th> 
                 </tr>
