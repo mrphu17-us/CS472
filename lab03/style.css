@@ -1,0 +1,45 @@
+.container-content {
+    margin: auto;
+    display: table;
+    max-width: 600px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 1%;
+    font-size: 14px;
+    border-color: bisque;
+    border-radius: 1pt;
+    border-style: solid;
+}
+
+.container-content h1 {
+    color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grade-box label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.grade-box input[type=text] {
+    min-width: 200px;
+    padding: 5px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.grade-box button {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.grade-box select {
+    margin-top: 10px;
+    padding: 5px;
+    width: 315px;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Retrieve Grade</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-content">
+            <h1>Retrieve your grade</h1>
+            <form class="grade-box" action="http://mumstudents.org/params.php" method="POST">
+                <p>
+                    <label class="label-50">Name:</label>
+                    <input type="text" id="txt_name">
+                </p>
+                <p>
+                    <label class="label-50">Student ID:</label>
+                    <input type="text" id="txt_student_id"></input>
+                </p>
+                <p>
+                    <label for="assignment">Assignment:</label>
+                    <select name="assignment" id="drop_assignment">
+                        <option value="algo">Algorithm</option>
+                        <option value="algo">WAP</option>
+                        <option value="algo">EA</option>
+                        <option value="algo">MPP</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Entry:</label>
+                    <input type="radio" id="August" name="August" value="August"></input>
+                    August
+                    <input type="radio" id="May" name="May" value="May"></input>
+                    May
+                    <input type="radio" id="November" name="November" value="November"></input>
+                    November
+                </p>
+                <p>
+                    <input type="checkbox" id="agree" name="agree"></input>
+                    <span>I only check my grade</span>
+                </p>
+                <p class="text-center">
+                    <button type="submit">Get Grade!</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
