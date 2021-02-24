@@ -2,6 +2,7 @@ body {
     margin: 0px;
     background-image: url("images/background.png");
     background-attachment: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -37,11 +38,10 @@ body {
 .container-content {
     margin: auto;
     width: 800px;
-    /* display: flex; */
-    /* position: relative; */
-    border-radius: 15px;
+    border-width: 4px;
+    border-radius: 20px;
     border-style: solid;
-    border-color: #7F7F7F;
+    border-color: gray;
     overflow: hidden;
 }
 
@@ -53,28 +53,49 @@ body {
 
 .header-percent {
     background-image: url("images/rbg.png");
+    height: 83px;
 }
 
 .border-gray {
     border-radius: 10px;
     border-style: solid;
-    border-color: #7F7F7F;
+    border-color: gray;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 8px;
+    border-width: 2px;
+}
+
+.left-section img {
+    float: left;
+    margin-right: 5px;
+}
+
+.right-section im {
+    float: left;
+    margin-right: 5px;
+}
+
+.reviewer {
+    margin-bottom: 10pt;
 }
 
 .left-content {
     float: left;
-    width: 70%;
+    width: 550px;
 }
 
 .right-content {
     float: left;
-    width: 30%;
-    background-color: #9ABB55;
+    width: 250px;
+    background-color: #A2B964;
     box-sizing: border-box;
-    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+}
+
+.right-content dl {
+    padding: 10pt;
 }
 
 .right-content::after {
@@ -84,7 +105,7 @@ body {
 .bottom-content {
     float: left;
     width: 100%;
-    background-color: #9ABB55;
+    background-color: #A2B964;
     text-align: center;
 }
 
@@ -97,16 +118,17 @@ body {
 
 .left-section {
     float: left;
-    width: 50%;
+    width: 47%;
     box-sizing: border-box;
-    padding: 10px;
+    margin-left: 2%;
 }
 
 .right-section {
     float: left;
-    width: 50%;
+    width: 47%;
     box-sizing: border-box;
-    padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 ul {
@@ -116,13 +138,20 @@ ul {
 
 .text-bold {
     font-weight: bold;
+    font-size: 8pt;
+    background-color: #E8DC9B;
 }
 
 dt {
     font-weight: bold;
+    margin-top: 10pt;
 }
 
 .validation {
     text-align: right;
     padding: 10px;
+    opacity: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
