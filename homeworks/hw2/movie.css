@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    background-image: url("images/background.png");
+    background-attachment: fixed;
+}
+
+.container {
+    margin: auto;
+    padding: 0px;
+}
+
+.header-banner {
+    text-align: center;
+    width: 100%;
+    background-image: url("images/bannerbg.png");
+}
+
+.header-banner>img {
+    margin: auto;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+.big-percent {
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+}
+
+.container-content {
+    margin: auto;
+    width: 800px;
+    /* display: flex; */
+    /* position: relative; */
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #7F7F7F;
+    overflow: hidden;
+}
+
+.container-content::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.header-percent {
+    background-image: url("images/rbg.png");
+}
+
+.border-gray {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #7F7F7F;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.left-content {
+    float: left;
+    width: 70%;
+}
+
+.right-content {
+    float: left;
+    width: 30%;
+    background-color: #9ABB55;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.right-content::after {
+    clear: both;
+}
+
+.bottom-content {
+    float: left;
+    width: 100%;
+    background-color: #9ABB55;
+    text-align: center;
+}
+
+.main-section::after {
+    width: 100%;
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.left-section {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.right-section {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.validation {
+    text-align: right;
+    padding: 10px;
+}
