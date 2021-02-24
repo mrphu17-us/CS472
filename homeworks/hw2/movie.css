@@ -3,6 +3,7 @@ body {
     background-image: url("images/background.png");
     background-attachment: fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
 }
 
 .container {
@@ -57,27 +58,22 @@ body {
 }
 
 .border-gray {
+    font-weight: bold;
+    font-size: 8pt;
+    background-color: #E8DC9B;
+    border: 2px solid gray;
     border-radius: 10px;
-    border-style: solid;
-    border-color: gray;
-    overflow: hidden;
-    box-sizing: border-box;
     padding: 8px;
-    border-width: 2px;
+    margin-top: 2px;
 }
 
-.left-section img {
+.main-section img {
     float: left;
     margin-right: 5px;
 }
 
-.right-section im {
-    float: left;
-    margin-right: 5px;
-}
-
-.reviewer {
-    margin-bottom: 10pt;
+.main-section::after {
+    clear: both;
 }
 
 .left-content {
@@ -109,26 +105,10 @@ body {
     text-align: center;
 }
 
-.main-section::after {
-    width: 100%;
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.left-section {
-    float: left;
-    width: 47%;
-    box-sizing: border-box;
-    margin-left: 2%;
-}
-
-.right-section {
-    float: left;
-    width: 47%;
-    box-sizing: border-box;
-    margin-left: 2%;
-    margin-right: 2%;
+.main-section {
+    column-count: 2;
+    padding: 2%;
+    /* vertical-align: top; */
 }
 
 ul {
@@ -140,6 +120,7 @@ ul {
     font-weight: bold;
     font-size: 8pt;
     background-color: #E8DC9B;
+    margin-top: 2px;
 }
 
 dt {
