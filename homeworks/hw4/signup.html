@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +14,7 @@
     <div class="container">
         <div class="main-form">
             <span class="header-title">New User Signup</span>
-            <form action="">
+            <form action="/">
                 <div class="item">
                     <label for="fname">Name: </label>
                     <input class="input-size-large" type="text" id="name" name="name" placeholder="Your name" required
@@ -26,11 +22,11 @@
                 </div>
                 <div class="item">
                     <label for="gender">Gender: </label>
-                    <input type="radio" id="gender" name="gender" value="male">Male</input>
-                    <input type="radio" id="gender" name="gender" value="female">Female</input>
+                    <input type="radio" id="genderMale" name="gender" value="male">Male</input>
+                    <input type="radio" id="genderFemal" name="gender" value="female">Female</input>
                     <div class="item">
                         <label for="age">Age: </label>
-                        <input class="input-size-small" maxlength="2" type="number" id="lname" name="lname" required>
+                        <input class="input-size-small" max="2" type="number" id="lname" name="lname" required>
                     </div>
                     <div class="item">
                         <label for="personality">Personality Type: </label>
@@ -47,10 +43,10 @@
                     </div>
                     <div class="item">
                         <label for="seekingage">Seeking Age: </label>
-                        <input class="input-size-small" type="number" maxlength="2" id="seekingageMin"
-                            name="seekingageMin" placeholder="min"> to
-                        <input class="input-size-small" type="number" maxlength="2" id="seekingageMax"
-                            name="seekingageMax" placeholder="max">
+                        <input class="input-size-small" type="number" max="2" id="seekingageMin" name="seekingageMin"
+                            placeholder="min"> to
+                        <input class="input-size-small" type="number" max="2" id="seekingageMax" name="seekingageMax"
+                            placeholder="max">
                     </div>
                     <div class="item">
                         <input type="button" id="submit" name="submit" value="Submit" />
