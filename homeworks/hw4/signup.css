@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    margin: auto;
+    width: 600px;
+    margin-top: 40px;
+}
+
+.header-title {
+    background-color: #e0dbd5;
+    padding: 10px;
+    border: solid gray;
+    border-width: 2px;
+    position: absolute;
+    box-shadow: gray 1px 1px;
+    top: 25px;
+}
+
+.main-form {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: gray 1px 1px;
+    background-color: antiquewhite;
+}
+
+.main-form input[type=button] {
+    padding: 10px;
+    font-size: large;
+    width: 150px;
+}
+
+.color-red {
+    color: red;
+    text-decoration: none;
+}
+
+.item {
+    margin-top: 15px;
+}
+
+.item select {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #e0dbd5;
+}
+
+.item label {
+    font-weight: bold;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    display: inline-block;
+}
+
+.item input[type=text] {
+    border: 1px solid #e0dbd5;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.item input[type=number] {
+    border: 1px solid #e0dbd5;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.input-size-large {
+    width: 300px;
+    height: 25px;
+}
+
+.input-size-small {
+    width: 100px;
+    height: 25px;
+}

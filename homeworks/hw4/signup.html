@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-form">
+            <span class="header-title">New User Signup</span>
+            <form action="">
+                <div class="item">
+                    <label for="fname">Name: </label>
+                    <input class="input-size-large" type="text" id="name" name="name" placeholder="Your name" required
+                        autofocus>
+                </div>
+                <div class="item">
+                    <label for="gender">Gender: </label>
+                    <input type="radio" id="gender" name="gender" value="male">Male</input>
+                    <input type="radio" id="gender" name="gender" value="female">Female</input>
+                    <div class="item">
+                        <label for="age">Age: </label>
+                        <input class="input-size-small" maxlength="2" type="number" id="lname" name="lname" required>
+                    </div>
+                    <div class="item">
+                        <label for="personality">Personality Type: </label>
+                        <input class="input-size-small" maxlength="4" type="text" id="personality" name="personality">
+                        (<a class="color-red" href="#">Don't know your type?</a>)
+                    </div>
+                    <div class="item">
+                        <label for="favoriteOS">Favorite OS: </label>
+                        <select id="favoriteOS" class="selection">
+                            <option value="windows" selected>Windows</option>
+                            <option value="MacOSX">Mac OS X</option>
+                            <option value="Linux">Linux</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="seekingage">Seeking Age: </label>
+                        <input class="input-size-small" type="number" maxlength="2" id="seekingageMin"
+                            name="seekingageMin" placeholder="min"> to
+                        <input class="input-size-small" type="number" maxlength="2" id="seekingageMax"
+                            name="seekingageMax" placeholder="max">
+                    </div>
+                    <div class="item">
+                        <input type="button" id="submit" name="submit" value="Submit" />
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
