@@ -40,12 +40,7 @@ public class Calculator extends HttpServlet {
 		if (session != null 
 				&& request.getParameter("btn_clear") != null 
 				&& request.getParameter("btn_clear").equals("Clear")) {
-			session.removeAttribute("txt_num1");
-			session.removeAttribute("txt_num2");
-			session.removeAttribute("txt_num3");
-			session.removeAttribute("txt_num4");
-			session.removeAttribute("txt_result1");
-			session.removeAttribute("txt_result2");
+			session.invalidate();
 		} else {
 			Integer txt_mum1 = Integer.valueOf(request.getParameter("txt_num1"));
 			Integer txt_mum2 = Integer.valueOf(request.getParameter("txt_num2"));
