@@ -29,10 +29,16 @@ input[type=submit] {
 	font-weight: bold;
 	font-size: 20px;
 }
+.container {
+	border: solid gray 1px;
+	padding: 10px;
+	width: 500px;
+	margin: auto;
+}
 </style>
 </head>
 <body>
-	<div>
+	<div class="container">
 		<h1>The Number Quiz</h1>
 		<p>Your current score is: <span class="score">${score}</span>.</p>
 		<p>Guess the next number in the sequence.</p>
