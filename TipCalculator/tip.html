@@ -21,8 +21,8 @@
                 alert("Must be less than 100 and greater than 0");
                 return;
             }
-            let result = parseInt(subtotal) + parseInt((subtotal * (tip / 100)));
-            document.getElementById("total").innerHTML = "$" + result;
+            let tipTotal = parseInt((subtotal * (tip / 100)));
+            document.getElementById("total").innerHTML = "$" + tipTotal;
         }
     </script>
 </head>
@@ -46,7 +46,7 @@
         <hr />
 
         <div>
-            <h2>Your total:</h2>
+            <h2>Your tip total:</h2>
             <p id="total">$0.00</p>
         </div>
     </div>
