@@ -24,6 +24,7 @@ function checkBoxChanged() {
         element.style.fontWeight = "";
         element.style.color = "";
         element.style.textDecoration = "";
+        document.body.style.backgroundImage = "";
     }
 }
 

@@ -34,3 +34,8 @@ div {
 button {
     padding: 5px;
 }
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
