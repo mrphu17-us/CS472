@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ASCII Animation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ascii.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="head-title">CSE 190 M ASCII Animation Viewer</h1>
+        <textarea id="textarea" cols="80" rows="20"></textarea>
+        <div class="control">
+            <fieldset class="col">
+                <legend>Play Controls:</legend>
+                <button id="btnStart" name="start" value="Start">Start</button>
+                <button id="btnStop" name="stop" value="Stop" disabled>Stop</button>
+            </fieldset>
+
+            <fieldset class="col">
+                <legend>Animation:</legend>
+                <select id="dropdownAnimation">
+                    <option value="Blank">Blank</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Juggler">Juggler</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Dive">Dive</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="col">
+                <legend>Size:</legend>
+                <select id="dropdownSize">
+                    <option value="Tiny">Tiny</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="ExtraLarge">Extra Large</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="col">
+                <legend>Speed:</legend>
+                <input type="checkbox" id="checkboxTurbo" name="Turbo" value="Turbo">
+                <label for="turbo"> Turbo</label><br>
+            </fieldset>
+        </div>
+        <script src="animations.js"></script>
+        <script src="ascii.js"></script>
+</body>
+
+</html>
