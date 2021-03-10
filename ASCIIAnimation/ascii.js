@@ -1,9 +1,4 @@
-var btnStart = document.getElementById("btnStart");
-var btnStop = document.getElementById("btnStop");
-var dropdownAnimation = document.getElementById("dropdownAnimation");
-var dropdownSize = document.getElementById("dropdownSize");
-var textarea = document.getElementById("textarea");
-var checkboxTurbo = document.getElementById("checkboxTurbo");
+/*jshint esversion: 6 */
 
 var selectedAnimation = "";
 var selectedFontSize = "12pt";
@@ -13,18 +8,29 @@ var currentFrame = 0;
 var isPlaying = false;
 
 var FONTSIZE = [];
-FONTSIZE["Tiny"] = "7pt";
-FONTSIZE["Small"] = "10pt";
-FONTSIZE["Medium"] = "12pt";
-FONTSIZE["Large"] = "16pt";
-FONTSIZE["ExtraLarge"] = "24pt";
-FONTSIZE["XXL"] = "32pt";
+FONTSIZE.Tiny = "7pt";
+FONTSIZE.Small = "10pt";
+FONTSIZE.Medium = "12pt";
+FONTSIZE.Large = "16pt";
+FONTSIZE.ExtraLarge = "24pt";
+FONTSIZE.XXL = "32pt";
+var ANIMATIONS = ANIMATIONS;
 
-btnStart.onclick = onClickBtnStart;
-btnStop.onclick = onClickBtnStop;
-dropdownAnimation.onchange = onChangeAnimation;
-dropdownSize.onchange = onChangeFontSize;
-checkboxTurbo.onchange = onchangeTurbo;
+function init() {
+    var btnStart = document.getElementById("btnStart");
+    var btnStop = document.getElementById("btnStop");
+    var dropdownAnimation = document.getElementById("dropdownAnimation");
+    var dropdownSize = document.getElementById("dropdownSize");
+    var checkboxTurbo = document.getElementById("checkboxTurbo");
+
+    btnStart.onclick = onClickBtnStart;
+    btnStop.onclick = onClickBtnStop;
+    dropdownAnimation.onchange = onChangeAnimation;
+    dropdownSize.onchange = onChangeFontSize;
+    checkboxTurbo.onchange = onchangeTurbo;
+}
+
+window.onload = init;
 
 function onClickBtnStart() {
     startAnimation(true);
@@ -49,14 +55,16 @@ function onchangeTurbo() {
 }
 
 function onChangeFontSize() {
-    let selectedValue = this.value;
+    var selectedValue = this.value;
+    var textarea = document.getElementById("textarea");
     selectedFontSize = FONTSIZE[selectedValue];
     textarea.style.fontSize = selectedFontSize;
 }
 
 function onChangeAnimation() {
     clearAnimation();
-    let selectedValue = this.value;
+    var selectedValue = this.value;
+    var textarea = document.getElementById("textarea");
     selectedAnimation = getAnimation(selectedValue);
     textarea.value = selectedAnimation;
 }
@@ -70,6 +78,8 @@ function getAnimation(value) {
 }
 
 function startAnimation(isResetFrame) {
+    var btnStart = document.getElementById("btnStart");
+    var btnStop = document.getElementById("btnStop");
     btnStop.disabled = false;
     btnStart.disabled = true;
     if (isResetFrame == true)
@@ -79,12 +89,15 @@ function startAnimation(isResetFrame) {
 }
 
 function clearAnimation() {
+    var btnStart = document.getElementById("btnStart");
+    var btnStop = document.getElementById("btnStop");
     btnStop.disabled = true;
     btnStart.disabled = false;
     clearInterval(animationTimer);
 }
 
 function animation(arrayAnimation) {
+    var textarea = document.getElementById("textarea");
     textarea.value = arrayAnimation[currentFrame];
     currentFrame += 1;
     if (currentFrame >= arrayAnimation.length) {
