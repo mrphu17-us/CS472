@@ -10,6 +10,7 @@ var selectedFontSize = "12pt";
 var speed = 250;
 var animationTimer;
 var currentFrame = 0;
+var isPlaying = false;
 
 var FONTSIZE = [];
 FONTSIZE["Tiny"] = "7pt";
@@ -27,10 +28,12 @@ checkboxTurbo.onchange = onchangeTurbo;
 
 function onClickBtnStart() {
     startAnimation(true);
+    isPlaying = true;
 }
 
 function onClickBtnStop() {
     clearAnimation();
+    isPlaying = false;
 }
 
 function onchangeTurbo() {
@@ -40,7 +43,9 @@ function onchangeTurbo() {
         speed = 250;
     }
     clearInterval(animationTimer);
-    startAnimation(false);
+    if (isPlaying) {
+        startAnimation(false);
+    }
 }
 
 function onChangeFontSize() {
