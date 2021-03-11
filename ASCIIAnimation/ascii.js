@@ -55,10 +55,13 @@ function onchangeTurbo() {
 }
 
 function onChangeFontSize() {
-    var selectedValue = this.value;
-    var textarea = document.getElementById("textarea");
-    selectedFontSize = FONTSIZE[selectedValue];
-    textarea.style.fontSize = selectedFontSize;
+    makeSizer(FONTSIZE[this.value])();
+}
+
+function makeSizer(size) {
+    return function () {
+        document.getElementById("textarea").style.fontSize = size;
+    }
 }
 
 function onChangeAnimation() {
