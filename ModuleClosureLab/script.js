@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var rudyTimer = (function () {
     setInterval(delayMsg, 200);
 });
