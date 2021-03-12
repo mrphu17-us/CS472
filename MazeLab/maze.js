@@ -2,12 +2,13 @@ var isTouch = false;
 var isGameStart = false;
 
 $(document).ready(function () {
-    $("div.boundary").mouseover(function () {
-        youloseHover(this);
+    $("#maze>div.boundary").mouseover(function () {
+        youloseHover();
     });
 
     $("div#start").click(function () {
         reset();
+        $("#status").html("Game On!");
     });
 
     $("div#start").mouseover(function () {
@@ -19,10 +20,10 @@ $(document).ready(function () {
     });
 });
 
-function youloseHover(div) {
+function youloseHover() {
     if (isGameStart) {
         isTouch = true;
-        $(div).addClass("youlose");
+        $("#maze>div.boundary").addClass("youlose");
     }
 }
 
@@ -34,10 +35,12 @@ function end() {
         alert("Sorry, you lost. :[");
     }
     isGameStart = false;
+    $("#status").html("Click the \"S\" to begin.");
 }
 
 function reset() {
-    $("div").removeClass("youlose");
+    $("#maze>div.boundary").removeClass("youlose");
+    $("#status").html("Click the \"S\" to begin.");
     isTouch = false;
     isGameStart = true;
 }
