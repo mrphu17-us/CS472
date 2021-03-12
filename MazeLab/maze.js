@@ -6,6 +6,10 @@ $(document).ready(function () {
         youloseHover();
     });
 
+    $("#maze").mouseleave(function () {
+        youloseHover();
+    });
+
     $("div#start").click(function () {
         reset();
         $("#status").html("Game On!");
@@ -24,6 +28,7 @@ function youloseHover() {
     if (isGameStart) {
         isTouch = true;
         $("#maze>div.boundary").addClass("youlose");
+        $("#status").html("Sorry, you lost. :[");
     }
 }
 
@@ -31,11 +36,9 @@ function end() {
     if (isGameStart == false) return;
     if (isTouch == false) {
         alert("You win!");
-    } else {
-        alert("Sorry, you lost. :[");
+        $("#status").html("Click the \"S\" to begin.");
     }
     isGameStart = false;
-    $("#status").html("Click the \"S\" to begin.");
 }
 
 function reset() {
