@@ -5,7 +5,7 @@ upside.left = -1;
 upside.right = 1;
 upside.down = 4;
 
-init = function () {
+var init = function () {
     $("#puzzlearea").css("border", "5px solid gray");
     $("#puzzlearea").css("background-color", "yellow");
     // initialize each piece
