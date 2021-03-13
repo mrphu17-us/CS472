@@ -6,14 +6,16 @@ upside.right = 1;
 upside.down = 4;
 
 init = function () {
+    $("#puzzlearea").css("border", "5px solid gray");
     // initialize each piece
     $("#puzzlearea div").each(function (i, div) {
-        setPosition(div, i, true)
+        initSquare(div, i);
 
         $(this).click(puzzleOnClick);
         $(this).mouseover(puzzleOnHover);
         $(this).mouseleave(puzzleOnLeave);
     });
+    $("#shufflebutton").click(shuffle);
 };
 
 $(document).ready(function () {
@@ -21,9 +23,9 @@ $(document).ready(function () {
 });
 
 function puzzleOnHover() {
+    $("#puzzlearea div").css('cursor', 'pointer');
     if (isCanMove(this.pos) == true) {
         $(this).css("border", "5px solid red");
-        console.log("Current background pos: " + this.x + " y: " + this.y);
     }
 }
 
@@ -33,7 +35,6 @@ function puzzleOnLeave() {
 
 function isCanMove(currentPos) {
     currentPos = parseInt(currentPos);
-    console.log("current " + currentPos + " target " + emptySquare);
     if ((currentPos + upside.up) == emptySquare ||
         (currentPos + upside.left) == emptySquare ||
         (currentPos + upside.right) == emptySquare ||
@@ -46,16 +47,15 @@ function isCanMove(currentPos) {
 function puzzleOnClick() {
     var curPos = this.pos;
     if (isCanMove(curPos) == true) {
-        setPosition(this, emptySquare);
+        moveSquare(this, emptySquare, true);
         this.pos = emptySquare;
         emptySquare = curPos;
-        console.log("Curent empty square: " + emptySquare);
     } else {
         console.log("Cant move this square");
     }
 }
 
-function setPosition(div, i, isBackgroudChanged = false) {
+function initSquare(div, i, isBackgroudChanged = false) {
     // calculate x and y for this piece
     var x = ((i % 4) * 100);
     var y = (Math.floor(i / 4) * 100);
@@ -64,11 +64,10 @@ function setPosition(div, i, isBackgroudChanged = false) {
     $(div).addClass("puzzlepiece");
     $(div).css("left", x + 'px');
     $(div).css("top", y + 'px');
-    if (isBackgroudChanged == true) {
-        // $(div).css("background-image", 'url(background.jpg)');
-        div.style.backgroundImage = 'url("background.jpg")';
-        $(div).css("background-position", -x + 'px ' + (-y) + 'px');
-    }
+
+    // $(div).css("background-image", 'url(background.jpg)');
+    div.style.backgroundImage = 'url("background.jpg")';
+    $(div).css("background-position", -x + 'px ' + (-y) + 'px');
 
     // store x and y and pos
     div.x = x;
@@ -76,6 +75,57 @@ function setPosition(div, i, isBackgroudChanged = false) {
     div.pos = i;
 }
 
-function shuffle() {
+function moveSquare(div, i, animate = false) {
+    // calculate x and y for this piece
+    var x = ((i % 4) * 100);
+    var y = (Math.floor(i / 4) * 100);
 
+    if (animate) {
+        if (y == div.y && x > div.x) {
+            $(div).animate({
+                "left": x + 'px'
+            }, "fast");
+        } else if (y == div.y && x <= div.x) {
+            $(div).animate({
+                "left": x + 'px'
+            }, "fast");
+        } else if (x == div.x && y > div.y) {
+            $(div).animate({
+                "top": y + 'px'
+            }, "fast");
+        } else {
+            $(div).animate({
+                "top": y + 'px'
+            }, "fast");
+        }
+    } else {
+        $(div).css("left", x + 'px');
+        $(div).css("top", y + 'px');
+    }
+    // store x and y and pos
+    div.x = x;
+    div.y = y;
+    div.pos = i;
+}
+
+function shuffle() {
+    var randomStep = 100;
+    while (randomStep > 0) {
+        var canMoveSquares = [];
+        $("#puzzlearea div").each(function (i, div) {
+            if (isCanMove(div.pos) == true) {
+                canMoveSquares.push(div);
+            }
+        });
+        if (canMoveSquares.length > 0) {
+            let randomIndex = Math.floor(Math.random() * canMoveSquares.length);
+            let randomDiv = canMoveSquares[randomIndex];
+            var curPos = randomDiv.pos;
+
+            moveSquare(randomDiv, emptySquare);
+            randomDiv.pos = emptySquare;
+            emptySquare = curPos;
+        }
+        randomStep--;
+    }
 }
