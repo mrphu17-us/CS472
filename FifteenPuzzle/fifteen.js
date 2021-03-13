@@ -7,6 +7,7 @@ upside.down = 4;
 
 init = function () {
     $("#puzzlearea").css("border", "5px solid gray");
+    $("#puzzlearea").css("background-color", "yellow");
     // initialize each piece
     $("#puzzlearea div").each(function (i, div) {
         initSquare(div, i);
