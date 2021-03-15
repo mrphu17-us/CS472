@@ -11,11 +11,8 @@ $(document).ready(function () {
     init();
 });
 
-/* set some css for extra clear */
 /* each square will have click, mouse over, leave event */
 var init = function () {
-    $("#puzzlearea").css("border", "5px solid gray");
-    $("#puzzlearea").css("background-color", "yellow");
     // initialize each piece
     $("#puzzlearea div").each(function (i, div) {
         initSquare(div, i);

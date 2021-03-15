@@ -13,6 +13,8 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	border: 5px solid gray;
+	background-color: yellow;
 }
 
 /* This class should be applied to each of the 15 puzzle pieces. */
