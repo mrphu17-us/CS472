@@ -1,10 +1,18 @@
+/*Fifteen Puzzle Logic control*/
 var emptySquare = 15;
-var upside = [];
+// use this to calculate 4 relative squares of current square up right down left
+const upside = [];
 upside.up = -4;
 upside.left = -1;
 upside.right = 1;
 upside.down = 4;
 
+$(document).ready(function () {
+    init();
+});
+
+/* set some css for extra clear */
+/* each square will have click, mouse over, leave event */
 var init = function () {
     $("#puzzlearea").css("border", "5px solid gray");
     $("#puzzlearea").css("background-color", "yellow");
@@ -19,10 +27,7 @@ var init = function () {
     $("#shufflebutton").click(shuffle);
 };
 
-$(document).ready(function () {
-    init();
-});
-
+/* on hover check if the square can move -> highlight */
 function puzzleOnHover() {
     $("#puzzlearea div").css('cursor', 'pointer');
     if (isCanMove(this.pos) == true) {
@@ -30,10 +35,12 @@ function puzzleOnHover() {
     }
 }
 
+/* return square to normal */
 function puzzleOnLeave() {
     $(this).css("border", "5px solid black");
 }
 
+/* check if 4 relative squares can add up to emptySquare*/
 function isCanMove(currentPos) {
     currentPos = parseInt(currentPos);
     if ((currentPos + upside.up) == emptySquare ||
@@ -45,6 +52,7 @@ function isCanMove(currentPos) {
     return false;
 }
 
+/* on click then check if it can move and then move else do nothing */
 function puzzleOnClick() {
     var curPos = this.pos;
     if (isCanMove(curPos) == true) {
@@ -56,6 +64,7 @@ function puzzleOnClick() {
     }
 }
 
+/* init square with image and use pos to store position 0-15 */
 function initSquare(div, i, isBackgroudChanged = false) {
     // calculate x and y for this piece
     var x = ((i % 4) * 100);
@@ -76,6 +85,7 @@ function initSquare(div, i, isBackgroudChanged = false) {
     div.pos = i;
 }
 
+/* move the square with animation */
 function moveSquare(div, i, animate = false) {
     // calculate x and y for this piece
     var x = ((i % 4) * 100);
@@ -109,6 +119,7 @@ function moveSquare(div, i, animate = false) {
     div.pos = i;
 }
 
+/* random choose the step and move */
 function shuffle() {
     var randomStep = 100;
     while (randomStep > 0) {
