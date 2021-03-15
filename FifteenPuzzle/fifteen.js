@@ -1,3 +1,5 @@
+"use strict";
+
 /*Fifteen Puzzle Logic control*/
 var emptySquare = 15;
 // use this to calculate 4 relative squares of current square up right down left

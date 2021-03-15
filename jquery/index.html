@@ -7,24 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jquery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <style>
+        p {
+            color: blue;
+            margin: 8px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
     <script>
         $(document).ready(function () {
-            $("#btn1").bind('click', click);
-            $("#btn2").bind('click', bind);
-            function click() {
-                alert("click");
-                $(this).unbind('click');
-            };
-            function bind() {
-                $("#btn1").bind('click', click);
-            }
+            $(".third-item").prev().css("background-color", "blue");
         });
     </script>
 </head>
 
 <body>
-    <button id="btn1">Click me!</button>
-    <button id="btn2">Bind</button>
+    <div class="ancestors">
+        <div> (great-grandparent)
+            <ul> (grandparent)
+                <li> (direct parent)
+                    <span>some text</span>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
