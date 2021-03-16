@@ -1,0 +1,53 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.header {
+    padding: 5px;
+    background-color: #1d2a57;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+#searchbar {
+    margin-top: 15px;
+}
+
+#result {
+    margin-top: 15px;
+    background-color: #fff8e4;
+    padding: 10px;
+    min-height: 500px;
+}
+
+.result-item {
+    border-bottom: 1px dashed #606060;
+    padding-bottom: 10px;
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 18px;
+    width: 75%;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 12px;
+    float: right;
+    width: 175px;
+    font-size: 16x;
+    border: 1px solid #ddd;
+}
