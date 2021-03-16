@@ -42,6 +42,9 @@ public class DictServlet extends HttpServlet {
 
 		try {
 			String keyWord = request.getParameter("keyword");
+			if (keyWord == null) {
+				keyWord = "";
+			}
 			List<Entry> entries = dbcon.listAll(keyWord, 10);
 			String employeeJsonString = this.gson.toJson(entries);
 

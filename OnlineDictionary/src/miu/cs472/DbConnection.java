@@ -36,7 +36,7 @@ public class DbConnection {
 		List<Entry> list = new ArrayList<>();
 		String sql = "SELECT * FROM entries limit " + limit;
 		if (!keyword.equals("")) {
-			sql = "SELECT * FROM entries WHERE LOWER(word) LIKE \"" + keyword.toLowerCase() + "%\" limit " + limit;
+			sql = "SELECT * FROM entries WHERE LOWER(word) = \"" + keyword.toLowerCase() + "\" limit " + limit;
 		}
 		Connection conn = this.getConnetion();
 		Statement statement = conn.createStatement();

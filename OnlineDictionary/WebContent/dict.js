@@ -1,33 +1,49 @@
+"use strict";
+
 $(document).ready(function () {
     init();
 });
 
 function init() {
     $("#btnSearch").click(search);
-    $("#searchbox").keypress(function (e) {
-        var key = e.which;
-        if (key == 13) // the enter key code
-        {
-            search();
-            return false;
+    $("#searchbox").keypress(enterHandling);
+    myLoading.startBinding();
+    myLoading.stopBinding();
+
+}
+
+var myLoading = (function () {
+    return {
+        startBinding: function () {
+            $(document).ajaxStart(function () {
+                $(".container").LoadingOverlay("show", {
+                    image: "",
+                    text: "Loading..."
+                });
+            });
+        },
+        stopBinding: function () {
+            $(document).ajaxStop(function () {
+                $(".container").LoadingOverlay("hide");
+            });
         }
-    });
-    $(document).ajaxStart(function () {
-        $(".container").LoadingOverlay("show", {
-            image: "",
-            text: "Loading..."
-        });
-    });
-    $(document).ajaxStop(function () {
-        $(".container").LoadingOverlay("hide");
-    });
+    };
+})();
+
+function enterHandling(e) {
+    var key = e.which;
+    if (key == 13) // the enter key code
+    {
+        search();
+        return false;
+    }
 }
 
 function search() {
-	$("#searchbox").val("");
+    if ($("#searchbox").val() == "") return false;
     $("#result").html("");
     $.ajax(
-            "http://localhost:8080/OnlineDictionary/Entry/findAll", {
+            "/OnlineDictionary/Entry/findAll", {
                 "type": "POST",
                 "data": {
                     "keyword": $("#searchbox").val()
@@ -41,9 +57,8 @@ function search() {
 
 function mappingResult(data) {
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
-        let item = data[i];
-        let line = "<p class='result-item'> " + (i + 1) + "(" + item["wordtype"] + ") :: " + item["definition"] + "</p>";
+        let line = "<div class='result-item'><span>" + (i + 1) + ". (" + data[i].wordtype + ")</span><blockquote>" +
+            data[i].definition + "</blockquote></div>";
         $("#result").append(line);
     }
     if (data.length == 0) {

@@ -13,7 +13,8 @@
     padding: 5px;
     background-color: #1d2a57;
     color: white;
-    text-align: center;
+    text-align: center;    
+    background-image: url("bg.png");
 }
 
 .header h1 {
@@ -35,6 +36,17 @@
 .result-item {
     border-bottom: 1px dashed #606060;
     padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.result-item span {
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.result-item blockquote {
+    font-style: italic;
+    font-size: 14px;
 }
 
 input[type=text] {
@@ -42,6 +54,11 @@ input[type=text] {
     font-size: 18px;
     width: 75%;
     border: 1px solid #ddd;
+}
+
+input[type=text]:focus, button:focus {
+    outline: none !important;
+    box-shadow: 0 0 1px #719ECE;
 }
 
 button {
